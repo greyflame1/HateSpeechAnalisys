@@ -1,2 +1,22 @@
-# HateSpeechAnalisys
-Proiectul a fost facut cu ajutorul ai-ului . Am incercat sa creez un model in Python pentru a-mi detecta mesajele ofensatoare. Mai multe detalii sunt in documentatie. Credentialele pentru API de la X nu au fost atasate. Rularea lui se face prima oare prin antrenarea modelului urmand sa poti testa ulterior in celalalte script-uri. Se va antrena cu ajutorul file-ului train.csv. Modelul realizat din observatiile mele ori este suprainvatat, ori discrepanta dintre numarul de tweet-uri ofensatoare (aproximativ 16000 din ce tin minte de tweet-uri ofensatoare) si cele neutre si instigatoare (care au in total cele doua 8000) este prea mare.
+# HateSpeechAnalysis
+
+This project was created with the help of AI.  
+It implements a **Python model for detecting offensive (hate speech) messages**, mainly trained on Twitter data.  
+
+The model is first trained using the provided dataset (`train.csv`), and then it can be tested using the additional prediction scripts.  
+From testing, the model appears to be **overfitted**, possibly due to the imbalance between offensive (~16,000 samples) and neutral/inciting tweets (~8,000 total).
+
+---
+
+## Files
+
+- **antrenareModel1.py** – trains the classification model using `train.csv`  
+- **predictie.py** – runs predictions using the trained model  
+- **predictie_manual.py** – allows manual input for testing predictions  
+- **preluareDateTw.py** – collects tweets (requires Twitter API credentials)  
+- **train.csv** – main dataset for training  
+- **date_noi_tweeter.csv** – additional dataset for testing  
+- **model_clasificare.joblib** – saved trained model  
+- **vectorizator.joblib** – saved text vectorizer (used for preprocessing)  
+
+
